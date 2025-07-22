@@ -1,7 +1,6 @@
 services:  
   webapplication:  
     image: marceloataide/webapplication8:v1 
-    container_name: webapplication82
     ports:  
       - "80:8080"
     volumes:  

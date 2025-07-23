@@ -1,13 +1,10 @@
 services:  
   webapplication:  
-    image: marceloataide/webapplication8:v1 
+    build: .  
+    image: marceloataide/webapplication8:latest  
     ports:  
-      - "80:8080"
-    volumes:  
-      - ./publish:/app  
-    working_dir: /app  
+      - "80:8080"  
     environment:  
       - ASPNETCORE_URLS=http://+:8080  
       - ASPNETCORE_ENVIRONMENT=Production  
-    command: ["dotnet", "WebApplication8.dll"]  
-    restart: always
+    restart: always  
